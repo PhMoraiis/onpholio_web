@@ -1,33 +1,24 @@
 'use client'
 
-import { Menu, X } from 'lucide-react'
+import { LogOut, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
+import EllipseWithHoverMotion from '../EllipseWithHoverMotion'
 import { ILink, INavbarProps } from '../Navbar/type'
 import { Button } from '../ui/button'
-import EllipseWithHoverMotion from '../EllipseWithHoverMotion'
+import MenuProfile from '../MenuProfile'
 
-const Navbar = ({ links, linkButton }: INavbarProps) => {
+const DashboardNavbar = ({ links }: INavbarProps) => {
   const [state, setState] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
-
-  const handleNavigation = () => {
-    if (linkButton?.path) {
-      router.push(linkButton.path)
-    }
-    else {
-      router.push('/')
-    }
-  }
 
   return (
     <nav className="bg-white w-full md:static md:text-sm">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="/">
-            <EllipseWithHoverMotion width='200' height='50' />
+            <EllipseWithHoverMotion />
           </Link>
           <div className="md:hidden">
             <Button size="icon" variant="ghost"
@@ -57,10 +48,8 @@ const Navbar = ({ links, linkButton }: INavbarProps) => {
                 )
               })
             }
-            <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
-              <Button onClick={handleNavigation} variant="outlineBlack" size="lgRounded">
-                {linkButton?.title}
-              </Button>
+            <div className='space-y-3 items-center gap-x-6 pl-8 md:flex md:space-y-0'>
+              <MenuProfile />
             </div>
           </ul>
         </div>
@@ -69,4 +58,4 @@ const Navbar = ({ links, linkButton }: INavbarProps) => {
   )
 }
 
-export default Navbar
+export default DashboardNavbar

@@ -1,6 +1,7 @@
+import Navbar from "@/components/Navbar";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google"
-import { cn } from "@/lib/utils"
+import { Inter as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Crie sua Conta | OnPholio",
@@ -12,6 +13,22 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
+const links = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Novidades",
+    path: "/new",
+  },
+];
+
+const linkButton = {
+  title: "Entre Agora",
+  path: "/login",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,9 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>{children}</body>
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}>
+        <Navbar links={links} linkButton={linkButton} />
+        {children}
+      </body>
     </html>
   );
 }

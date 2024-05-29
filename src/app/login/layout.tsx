@@ -1,4 +1,4 @@
-import SimpleNavbar from "@/components/SimpleNavbar";
+import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -13,6 +13,22 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
+const links = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Novidades",
+    path: "/new",
+  },
+];
+
+const linkButton = {
+  title: "Crie uma Conta",
+  path: "/signup",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <SimpleNavbar />
+        <Navbar links={links} linkButton={linkButton} />
         {children}
       </body>
     </html>

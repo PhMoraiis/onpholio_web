@@ -10,10 +10,6 @@ export default function Home() {
       title: "Novidades",
       path: "/new",
     },
-    {
-      title: "Suporte",
-      path: "/support",
-    },
   ];
 
   const linkButton = {

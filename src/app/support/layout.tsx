@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,6 +13,22 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
+const links = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Novidades",
+    path: "/new",
+  },
+];
+
+const linkButton = {
+  title: "Comece Agora",
+  path: "/login",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +39,10 @@ export default function RootLayout({
       <body className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}>{children}</body>
+        )}>
+          <Navbar links={links} linkButton={linkButton}/>
+          {children}
+          </body>
     </html>
   );
 }

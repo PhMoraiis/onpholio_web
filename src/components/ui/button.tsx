@@ -15,7 +15,7 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         outlineBlack:
-          "border border-primary bg-background hover:bg-primary hover:text-accent",
+          "border border-primary bg-background hover:bg-primary hover:text-accent duration-500 ease-in-out",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -27,7 +27,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         link: "h-6 rounded-md",
-        lgRounded: "h-11 rounded-full px-8",
+        lgRounded: "h-10 rounded-full px-8",
       },
     },
     defaultVariants: {
