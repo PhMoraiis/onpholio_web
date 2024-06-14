@@ -48,7 +48,7 @@ const Navbar = ({ links, linkButton }: INavbarProps) => {
             {
               links.map((item: ILink, index: number) => {
                 return (
-                  <li key={index} className={`text-gray-600 ${pathname.toString() === item.path ? "text-white hover:text-border relative z-[1] rounded-full px-4 py-2 inset-0 bg-black" : "borderAnim hover:text-secondary-foreground"
+                  <li key={index} className={`text-gray-600 ${pathname.toString() === item.path ? "text-white relative z-[1] px-4 py-2 inset-0 bg-black shadow-lg btnLink" : "relative after:absolute after:bg-neutral-400 after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300 hover:text-secondary-foreground"
                     }`}>
                     <Link href={item.path} className="block">
                       {item.title}
@@ -58,7 +58,7 @@ const Navbar = ({ links, linkButton }: INavbarProps) => {
               })
             }
             <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
-              <Button onClick={handleNavigation} variant="outlineBlack" size="lgRounded">
+              <Button onClick={handleNavigation} variant="ghost" size="lgRounded" className='btn'>
                 {linkButton?.title}
               </Button>
             </div>

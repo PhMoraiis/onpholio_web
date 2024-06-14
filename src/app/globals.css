@@ -93,3 +93,46 @@
 .borderAnim:hover:before {
   width: 100%;
 }
+
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  border-radius: 50px;
+  background-image: linear-gradient(145deg, #f0f0f0, #a1a1a1);
+  box-shadow: 0 20px 30px -6px rgba(151, 131, 130, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
+.btnLink {
+  transition: all 0.3s ease-in-out;
+}
+
+.btnLink {
+  border-radius: 50px;
+  box-shadow: 0 20px 30px -6px rgba(151, 131, 130, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btnLink:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btnLink:active {
+  opacity: 0.5;
+}

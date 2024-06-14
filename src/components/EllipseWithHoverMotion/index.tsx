@@ -21,21 +21,21 @@ const EllipseWithHoverMotion = ({ width, height }: EllipseWithHoverMotionProps) 
     >
       <defs>
         <linearGradient id="paint0_linear_191_37" x1="88.3288" y1="39.8611" x2="88.3288" y2="460.702" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#333333" />
-          <stop offset="0.675" stop-color="#333333" />
-          <stop offset="0.96" stop-color="#4D4B4B" />
+          <stop stopColor="#333333" />
+          <stop offset="0.675" stopColor="#333333" />
+          <stop offset="0.96" stopColor="#4D4B4B" />
         </linearGradient>
         <linearGradient id="paint1_linear_191_37" x1="88.3288" y1="164.81" x2="88.3288" y2="316.972" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#F6F6F6" />
-          <stop offset="1" stop-color="#787878" />
+          <stop stopColor="#F6F6F6" />
+          <stop offset="1" stopColor="#787878" />
         </linearGradient>
         <linearGradient id="paint2_linear_191_37" x1="277.878" y1="195.856" x2="277.878" y2="391.712" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#333333" />
-          <stop offset="1" stop-color="#999999" />
+          <stop stopColor="#333333" />
+          <stop offset="1" stopColor="#999999" />
         </linearGradient>
         <linearGradient id="paint3_linear_191_37" x1="436.929" y1="381.746" x2="436.929" y2="565.72" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#333333" />
-          <stop offset="1" stop-color="#999999" />
+          <stop stopColor="#333333" />
+          <stop offset="1" stopColor="#999999" />
         </linearGradient>
       </defs>
       <motion.path

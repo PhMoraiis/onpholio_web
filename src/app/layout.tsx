@@ -1,7 +1,7 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google"
-import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Onpholio | Bem vindo ao OnPholio!",
@@ -15,15 +15,15 @@ const fontSans = FontSans({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>{children}</body>
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}>{children}</body>
     </html>
   );
 }

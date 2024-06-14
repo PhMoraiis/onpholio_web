@@ -1,8 +1,8 @@
 'use client'
 
-import { LogOut, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import EllipseWithHoverMotion from '../EllipseWithHoverMotion'
 import { ILink, INavbarProps } from '../Navbar/type'
@@ -18,7 +18,7 @@ const DashboardNavbar = ({ links }: INavbarProps) => {
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="/">
-            <EllipseWithHoverMotion />
+            <EllipseWithHoverMotion width='200' height='50' />
           </Link>
           <div className="md:hidden">
             <Button size="icon" variant="ghost"

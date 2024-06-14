@@ -12,15 +12,17 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode;}>) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={cn(
-        "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
-      )}>
-        {children}
-      </body>
-    </html>
+    <section lang="en" className={cn(
+      "min-h-screen bg-background font-sans antialiased",
+      fontSans.variable
+    )}>
+      {children}
+    </section>
   );
 }

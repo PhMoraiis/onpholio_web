@@ -1,7 +1,23 @@
-export default function Dashboard() {
+import Navbar from "@/components/Navbar";
+
+export default function Novidades() {
+  const links = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Novidades",
+      path: "/new",
+    },
+  ];
+  
+  const linkButton = {
+    title: "Comece Agora",
+    path: "/login",
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-    </main>
+    <Navbar links={links} linkButton={linkButton}/>
   );
 }

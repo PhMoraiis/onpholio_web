@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <main className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-full min-h-screen">
       <Navbar links={links} linkButton={linkButton} />
+      <Hero />
     </main>
   );
 }
