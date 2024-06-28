@@ -1,7 +1,6 @@
 'use client'
 
 import EllipseWithHoverMotion from "@/components/EllipseWithHoverMotion"
-import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,24 +10,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa"
 const SignUp = () => {
   const router = useRouter()
 
-  const links = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "Novidades",
-      path: "/new",
-    },
-  ];
-
-  const linkButton = {
-    title: "Entre Agora",
-    path: "/login",
-  };
-
   return (<>
-    <Navbar links={links} linkButton={linkButton} />
     <main className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-full h-[60vh] md:h-[80vh] lg:h-[80vh] flex flex-col items-center justify-center sm:px-4">
       <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
         <div className="text-center">

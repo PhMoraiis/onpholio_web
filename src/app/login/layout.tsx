@@ -29,17 +29,18 @@ const linkButton = {
   path: "/signup",
 };
 
-export default function RootLayout({
+export default function LoginLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <Navbar links={links} linkButton={linkButton} />
-        {children}
-      </body>
-    </html>
+    <section lang="en" className={cn(
+      "min-h-screen bg-background font-sans antialiased",
+      fontSans.variable
+    )}>
+      <Navbar links={links} linkButton={linkButton} />
+      {children}
+    </section>
   );
 }
